@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 import br.com.alura.rh.ValidacaoException;
 
-public class Funcionario {
+public class Employee {
 
 	private String name;
 	private String cpf;
@@ -14,7 +14,7 @@ public class Funcionario {
 	private BigDecimal salary;
 	private LocalDate dateLastReajust;
 
-	public Funcionario(String name, String cpf, Role role, BigDecimal salary) {
+	public Employee(String name, String cpf, Role role, BigDecimal salary) {
 		this.name = name;
 		this.cpf = cpf;
 		this.role = role;
