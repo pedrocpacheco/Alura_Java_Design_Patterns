@@ -1,10 +1,7 @@
 package br.com.alura.rh.model;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
-
-import br.com.alura.rh.ValidacaoException;
 
 public class Employee {
 
@@ -21,12 +18,8 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public void reajustSalary(BigDecimal raise) {
-		BigDecimal percentualReajuste = raise.divide(salary, RoundingMode.HALF_UP);
-		if (percentualReajuste.compareTo(new BigDecimal("0.4")) > 0) {
-			throw new ValidacaoException("Reajuste nao pode ser superior a 40% do salario!");
-		}
-		this.salary = this.salary.add(raise);
+	public void updateSalary(BigDecimal newSalary) {
+		this.salary = newSalary;
 		this.dateLastReajust = LocalDate.now();
 	}
 
