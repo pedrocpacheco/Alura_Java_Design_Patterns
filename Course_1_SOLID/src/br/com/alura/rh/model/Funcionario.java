@@ -8,34 +8,34 @@ import br.com.alura.rh.ValidacaoException;
 
 public class Funcionario {
 
-	private String nome;
+	private String name;
 	private String cpf;
-	private Cargo cargo;
-	private BigDecimal salario;
-	private LocalDate dataUltimoReajuste;
+	private Role role;
+	private BigDecimal salary;
+	private LocalDate dateLastReajust;
 
-	public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
-		this.nome = nome;
+	public Funcionario(String name, String cpf, Role role, BigDecimal salary) {
+		this.name = name;
 		this.cpf = cpf;
-		this.cargo = cargo;
-		this.salario = salario;
+		this.role = role;
+		this.salary = salary;
 	}
 
-	public void reajustarSalario(BigDecimal aumento) {
-		BigDecimal percentualReajuste = aumento.divide(salario, RoundingMode.HALF_UP);
+	public void reajustSalary(BigDecimal raise) {
+		BigDecimal percentualReajuste = raise.divide(salary, RoundingMode.HALF_UP);
 		if (percentualReajuste.compareTo(new BigDecimal("0.4")) > 0) {
 			throw new ValidacaoException("Reajuste nao pode ser superior a 40% do salario!");
 		}
-		this.salario = this.salario.add(aumento);
-		this.dataUltimoReajuste = LocalDate.now();
+		this.salary = this.salary.add(raise);
+		this.dateLastReajust = LocalDate.now();
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String nome) {
+		this.name = nome;
 	}
 
 	public String getCpf() {
@@ -46,28 +46,28 @@ public class Funcionario {
 		this.cpf = cpf;
 	}
 
-	public Cargo getCargo() {
-		return cargo;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setCargo(Cargo cargo) {
-		this.cargo = cargo;
+	public void setRole(Role cargo) {
+		this.role = cargo;
 	}
 
-	public BigDecimal getSalario() {
-		return salario;
+	public BigDecimal getSalary() {
+		return salary;
 	}
 
-	public void setSalario(BigDecimal salario) {
-		this.salario = salario;
+	public void setSalary(BigDecimal salario) {
+		this.salary = salario;
 	}
 
-	public LocalDate getDataUltimoReajuste() {
-		return dataUltimoReajuste;
+	public LocalDate getDateLastReajust() {
+		return dateLastReajust;
 	}
 
-	public void setDataUltimoReajuste(LocalDate dataUltimoReajuste) {
-		this.dataUltimoReajuste = dataUltimoReajuste;
+	public void setDateLastReajust(LocalDate dataUltimoReajuste) {
+		this.dateLastReajust = dataUltimoReajuste;
 	}
 
 }
