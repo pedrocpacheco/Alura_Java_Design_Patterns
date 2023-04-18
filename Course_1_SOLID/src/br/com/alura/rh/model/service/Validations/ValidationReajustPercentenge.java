@@ -1,10 +1,10 @@
-package br.com.alura.rh.model.service;
+package br.com.alura.rh.model.service.Validations;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import br.com.alura.rh.ValidacaoException;
-import br.com.alura.rh.model.Employee;
+import br.com.alura.rh.model.classes.Employee;
+import br.com.alura.rh.model.exceptions.ValidacaoException;
 
 public class ValidationReajustPercentenge implements ValidationReajust{
     

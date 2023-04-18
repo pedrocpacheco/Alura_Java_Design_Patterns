@@ -1,8 +1,8 @@
-package br.com.alura.rh.model.service;
+package br.com.alura.rh.model.service.Validations;
 
 import java.math.BigDecimal;
 
-import br.com.alura.rh.model.Employee;
+import br.com.alura.rh.model.classes.Employee;
 
 public interface ValidationReajust {
     
