@@ -23,6 +23,10 @@ public class Employee {
 		this.dateLastReajust = LocalDate.now();
 	}
 
+	public void promote(Role role){
+		this.role = role;
+	}
+
 	public String getName() {
 		return name;
 	}
