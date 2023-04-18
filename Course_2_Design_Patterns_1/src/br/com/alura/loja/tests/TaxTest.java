@@ -8,7 +8,7 @@ import br.com.alura.loja.taxes.tipes.ICMS;
 
 public class TaxTest {
     public static void main(String[] args) {
-        Budget budget = new Budget(new BigDecimal(1000));
+        Budget budget = new Budget(new BigDecimal(1000), 1);
         TaxCalculator taxCalculator = new TaxCalculator();
         System.out.println(taxCalculator.calculate(budget, new ICMS()));
     }
