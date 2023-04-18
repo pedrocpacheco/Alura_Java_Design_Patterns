@@ -10,7 +10,7 @@ import br.com.alura.loja.discount.tipes.NoDiscount;
 
 public class DiscountCalculator {
     public BigDecimal calculate(Budget budget){
-        Discount discount = new MoreThan5Itens(new ValueBiggerThan500(new NoDiscount()));
-        return discount.execCalculation(budget);
+        Discount discountCascate = new MoreThan5Itens(new ValueBiggerThan500(new NoDiscount()));
+        return discountCascate.calculate(budget);
     }
 }

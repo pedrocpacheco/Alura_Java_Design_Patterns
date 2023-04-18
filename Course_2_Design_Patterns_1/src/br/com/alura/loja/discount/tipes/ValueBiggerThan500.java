@@ -12,10 +12,8 @@ public class ValueBiggerThan500 extends Discount{
 
     @Override
     public BigDecimal execCalculation(Budget budget) {
-        if(budget.getItensQuantity() > 10)
-            return budget.getValue().multiply(new BigDecimal("0.5"));
+        return budget.getValue().multiply(new BigDecimal("0.5"));
         
-        return nextDiscount.execCalculation(budget);
     }
 
     @Override
