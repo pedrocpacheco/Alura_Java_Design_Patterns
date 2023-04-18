@@ -1,4 +1,4 @@
-package br.com.alura.loja.orcamento;
+package br.com.alura.loja.budget;
 
 import java.math.BigDecimal;
 
@@ -13,6 +13,5 @@ public class Budget {
     public BigDecimal getValue() {
         return value;
     }
-
-    
+   
 }
