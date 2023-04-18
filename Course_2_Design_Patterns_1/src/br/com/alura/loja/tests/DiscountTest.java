@@ -11,6 +11,8 @@ public class DiscountTest {
         Budget budget2 = new Budget(new BigDecimal("200"), 50);
 
         DiscountCalculator calculator = new DiscountCalculator();
+        System.out.println();
+    
         System.out.println(calculator.calculate(budget));
         System.out.println(calculator.calculate(budget2));
         
