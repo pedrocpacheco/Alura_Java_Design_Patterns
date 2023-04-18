@@ -7,7 +7,7 @@ import java.time.temporal.ChronoUnit;
 import br.com.alura.rh.ValidacaoException;
 import br.com.alura.rh.model.Employee;
 
-public class ValidationReajustsInterval {
+public class ValidationReajustsInterval implements ValidationReajust{
     public void validate(Employee employee, BigDecimal raise){
         long mounthsSinceLastReajust = ChronoUnit.MONTHS.between(employee.getDateLastReajust(), LocalDate.now());
         if(mounthsSinceLastReajust < 6){
