@@ -5,58 +5,52 @@ import java.time.LocalDate;
 
 public class Employee {
 
-	private String name;
-	private String cpf;
-	private Role role;
-	private BigDecimal salary;
+	private PersonalData personalData;
 	private LocalDate dateLastReajust;
 
 	public Employee(String name, String cpf, Role role, BigDecimal salary) {
-		this.name = name;
-		this.cpf = cpf;
-		this.role = role;
-		this.salary = salary;
+		this.personalData = new PersonalData(name, cpf, role, salary);
 	}
 
 	public void updateSalary(BigDecimal newSalary) {
-		this.salary = newSalary;
+		this.personalData.setSalary(newSalary);
 		this.dateLastReajust = LocalDate.now();
 	}
 
 	public void promote(Role role){
-		this.role = role;
+		this.personalData.setRole(role);
 	}
 
 	public String getName() {
-		return name;
+		return this.personalData.getName();
 	}
 
 	public void setName(String nome) {
-		this.name = nome;
+		this.personalData.setName(nome);
 	}
 
 	public String getCpf() {
-		return cpf;
+		return this.personalData.getCpf();
 	}
 
 	public void setCpf(String cpf) {
-		this.cpf = cpf;
+		this.personalData.setCpf(cpf);;
 	}
 
 	public Role getRole() {
-		return role;
+		return this.personalData.getRole();
 	}
 
 	public void setRole(Role cargo) {
-		this.role = cargo;
+		this.personalData.setRole(cargo);;
 	}
 
 	public BigDecimal getSalary() {
-		return salary;
+		return this.personalData.getSalary();
 	}
 
 	public void setSalary(BigDecimal salario) {
-		this.salary = salario;
+		this.personalData.setSalary(salario);;
 	}
 
 	public LocalDate getDateLastReajust() {
